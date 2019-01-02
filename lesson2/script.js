@@ -36,3 +36,20 @@ switch (a) {
   case 14: document.write("14 <br>");
   case 15: document.write("15 <br>");
 }
+
+//пятое задание
+function summ (arg1, arg2) {
+  return arg1 + arg2;
+}
+
+function diff (arg1, arg2) {
+  return arg1 - arg2;
+}
+
+function mult (arg1, arg2) {
+  return arg1 * arg2;
+}
+
+function div (arg1, arg2) {
+  return arg1 / arg2;
+}
