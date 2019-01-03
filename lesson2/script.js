@@ -84,9 +84,22 @@ function mathOperation (arg1, arg2, operation) {
 document.write("<h2>Пятое, шестое задание</h2>");
 mathOperation(1, 2, "/");
 
+//седьмое задание
+document.write("<h2>Седьмое задание</h2>");
+document.write("<h3>Сравнение с приведением типов</h3>");
+if (null == 0){
+  document.write(`<p>Результат: null == 0. Истина</p>`);
+} else {
+  document.write(`<p>Результат: null == 0. Ложь</p>`);
+}
+document.write("<h3>Строгое сравнение</h3>");
+if (null === 0){
+  document.write(`<p>Результат: null === 0. Истина</p>`);
+} else {
+  document.write(`<p>Результат: null === 0. Ложь</p>`);
+}
 
-
-
+document.write(`<p>Вывод: null не имеет цифрового эквивалента. Это примитивное значение, по сути, показывающее отсутсвие какого-либо значения</p>`);
 
 
 
