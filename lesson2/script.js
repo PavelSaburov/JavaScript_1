@@ -101,7 +101,16 @@ if (null === 0){
 
 document.write(`<p>Вывод: null не имеет цифрового эквивалента. Это примитивное значение, по сути, показывающее отсутсвие какого-либо значения</p>`);
 
-
+//восьмое задание
+document.write("<h2>Восьмое задание</h2>");
+function power (val, pow) {
+  if (pow===1) {
+    return val;
+  } else {
+    return val*power(val, pow-1);
+  }
+}
+document.write(`<p>Результат: ${power(2,5)}</p>`);
 
 
 
