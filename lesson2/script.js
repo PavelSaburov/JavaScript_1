@@ -39,17 +39,58 @@ switch (a) {
 
 //пятое задание
 function summ (arg1, arg2) {
+  "use strict"
   return arg1 + arg2;
 }
 
 function diff (arg1, arg2) {
+  "use strict"
   return arg1 - arg2;
 }
 
 function mult (arg1, arg2) {
+  "use strict"
   return arg1 * arg2;
 }
 
 function div (arg1, arg2) {
+  "use strict"
   return arg1 / arg2;
 }
+
+//шестое задание
+function mathOperation (arg1, arg2, operation) {
+  "use strict"
+  switch (operation) {
+    case "+": {
+      document.write(`<p>Результат: ${summ(arg1, arg2)}</p>`);
+      break;
+    }
+    case "-": {
+      document.write(`<p>Результат: ${diff(arg1, arg2)}</p>`);
+      break;
+    }
+    case "*": {
+      document.write(`<p>Результат: ${mult(arg1, arg2)}</p>`);
+      break;
+    }
+    case "/": {
+      document.write(`<p>Результат: ${div(arg1, arg2)}</p>`);
+      break;
+    }
+    default: document.write(`<p>Неизвестная операция</p>`);
+  }
+}
+document.write("<h2>Пятое, шестое задание</h2>");
+mathOperation(1, 2, "/");
+
+
+
+
+
+
+
+
+
+
+
