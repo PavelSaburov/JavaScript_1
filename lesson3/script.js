@@ -3,16 +3,20 @@ function isPrime (arg) {
   if (arg < 2) {
     return false;
   }
-  for (let i = 2; i <= Math.round(Math.sqrt(arg)); i++) {
+  let i = 2;
+  while ( i <= Math.round(Math.sqrt(arg))) {
     if (arg % i === 0) {
       return false;
     }
+    i++;
   }
   return true;
 }
 
-for (let i = 0; i <= 100; i++) {
+let i = 0;
+while ( i <= 100) {
   if (isPrime(i)) {
     console.log(i);
   }
+  i++;
 }
