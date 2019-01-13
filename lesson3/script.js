@@ -36,3 +36,6 @@ do {
 
 //третье задание
 for (let j = 0; j < 9; console.log(j), j++) {}
+
+//четвертое задание
+for (let j = 1, s = "*"; j < 21; console.log(s), j++, s += "*") {}
