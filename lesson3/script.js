@@ -33,3 +33,6 @@ do {
   }
   num++;
 } while (num<=10);
+
+//третье задание
+for (let j = 0; j < 9; console.log(j), j++) {}
