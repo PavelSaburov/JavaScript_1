@@ -149,13 +149,11 @@ switch (event) {
 alert('Спасибо за игру');
 if (progress.length > 0) {
   var resp = +prompt("Если хотите просмотреть свой ход введите его номер от 1 по " + progress.length);
-  ok = isAnswer(progress.length+1, resp);
+  ok = isAnswer(progress.length, resp);
   if (ok) {
     confirm("Описание хода:\n" + progress[resp-1].desc + "\nВы выбрали вариант номер: " + progress[resp-1].case);
-  } else {
-    confirm("Некорректные данные");
   }
-}
+ }
 
 
 //------------------------------------------
