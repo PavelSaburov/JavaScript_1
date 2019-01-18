@@ -1,4 +1,4 @@
-var rows = 8, cols = 8;
+var rows = 8, cols = 8, counter = 0;
 
 function createTable() {
 
@@ -6,18 +6,21 @@ function createTable() {
   for (var i = 0; i <= rows+1; i++) {
     var row = document.createElement("tr");
     table.appendChild(row);
-    for (var j = 0; i <= cols+1; j++) {
+    for (var j = 0; j <= cols+1; j++) {
       var col = document.createElement("td");
-      col.content = "1";
-      if (j % 2 === 0) {
+      if (counter % 2 === 0) {
         col.classList.add("black");
       } else {
         col.classList.add("white");
       }
       row.appendChild(col);
+      console.log("1");
+      counter++;
     }
   }
-  return table;
+  document.body.appendChild(table);
 }
 
-document.body.appendChild(createTable());
+createTable();
+
+
