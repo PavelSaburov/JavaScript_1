@@ -13,3 +13,15 @@ table {
 .white {
     background-color: #fff;
 }
+table tr:first-child td {
+    background-color: red;
+}
+table tr:last-child td {
+    background-color: red;
+}
+table tr td:first-child {
+    background-color: red;
+}
+table tr td:last-child {
+    background-color: red;
+}
