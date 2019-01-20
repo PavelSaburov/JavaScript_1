@@ -1,4 +1,4 @@
-var rows = 8, cols = 8, counter = 1;
+var rows = 8, cols = 8, counter = 0;
 
 function createTable() {
 
@@ -8,7 +8,7 @@ function createTable() {
     table.appendChild(row);
     for (var j = 0; j <= cols+1; j++) {
       var col = document.createElement("td");
-      if (i === 0 || j === 0) {
+      if (i === 0 || j === 0 || i === rows+1 || j === cols+1) {
         col.classList.add("caption");
       } else if (counter % 2 === 0) {
         col.classList.add("black");
@@ -18,8 +18,8 @@ function createTable() {
         counter++;
       }
       row.appendChild(col);
-      console.log("1");
     }
+    counter++;
   }
   document.body.appendChild(table);
 }

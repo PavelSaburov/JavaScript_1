@@ -8,20 +8,25 @@ table {
     border: 1px solid #000;
 }
 .black {
-    background-color: #000;
+    background-color: #7e7e7e;
+    color: black;
 }
 .white {
     background-color: #fff;
+    color: #fff2c6;
 }
-table tr:first-child td {
-    background-color: red;
-}
-table tr:last-child td {
-    background-color: red;
-}
-table tr td:first-child {
-    background-color: red;
-}
-table tr td:last-child {
+/*table tr:first-child td {*/
+    /*background-color: red;*/
+/*}*/
+/*table tr:last-child td {*/
+    /*background-color: red;*/
+/*}*/
+/*table tr td:first-child {*/
+    /*background-color: red;*/
+/*}*/
+/*table tr td:last-child {*/
+    /*background-color: red;*/
+/*}*/
+.caption {
     background-color: red;
 }
