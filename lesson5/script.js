@@ -17,6 +17,7 @@ function createTable() {
         col.classList.add("white");
         counter++;
       }
+      col.innerText = gameField[i][j];
       row.appendChild(col);
     }
     counter++;

@@ -2,10 +2,21 @@ h1 {
     text-align: center;
 }
 table {
-    width: 400px;
-    height: 400px;
+    /*width: 400px;*/
+    /*height: 400px;*/
     margin: 0 auto;
+    border-collapse: collapse;
+
+}
+table td {
+    font-size: 40px;
+    vertical-align: center;
+    text-align: center;
+    width: 40px;
     border: 1px solid #000;
+}
+table td {
+    height: 40px;
 }
 .black {
     background-color: #7e7e7e;
@@ -28,5 +39,6 @@ table {
     /*background-color: red;*/
 /*}*/
 .caption {
-    background-color: red;
+    font-size: 16px;
+    border: none;
 }
