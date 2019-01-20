@@ -20,13 +20,17 @@ table td {
 }
 .black {
     background-color: #7e7e7e;
+}
+.blackFigure {
     color: black;
 }
 .white {
     background-color: #fff;
+
+}
+.whiteFigure {
     color: #fff2c6;
 }
-
 /*table tr:last-child td {*/
     /*background-color: red;*/
 /*}*/
