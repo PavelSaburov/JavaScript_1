@@ -26,19 +26,21 @@ table td {
     background-color: #fff;
     color: #fff2c6;
 }
-/*table tr:first-child td {*/
-    /*background-color: red;*/
-/*}*/
+
 /*table tr:last-child td {*/
     /*background-color: red;*/
 /*}*/
 /*table tr td:first-child {*/
     /*background-color: red;*/
 /*}*/
-/*table tr td:last-child {*/
-    /*background-color: red;*/
-/*}*/
+
 .caption {
     font-size: 16px;
     border: none;
+}
+table tr:first-child td {
+    transform: rotate(180deg);
+}
+table tr td:last-child {
+    transform: rotate(180deg);
 }
