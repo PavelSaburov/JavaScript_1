@@ -17,6 +17,7 @@ table td {
 }
 table td {
     height: 40px;
+    cursor: pointer;
 }
 .black {
     background-color: #7e7e7e;
@@ -29,7 +30,7 @@ table td {
 
 }
 .whiteFigure {
-    color: #fff2c6;
+    color: #ffde56;
 }
 /*table tr:last-child td {*/
     /*background-color: red;*/
@@ -41,6 +42,7 @@ table td {
 .caption {
     font-size: 16px;
     border: none;
+    cursor: default;
 }
 table tr:first-child td {
     transform: rotate(180deg);
