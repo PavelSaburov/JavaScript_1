@@ -2,7 +2,6 @@ var rows = 8, cols = 8, counter = 0;
 
 
 function createTable() {
-
   var table = document.createElement("table");
   for (var i = 0; i <= rows+1; i++) {
     var row = document.createElement("tr");
@@ -18,7 +17,7 @@ function createTable() {
         col.classList.add("white");
         counter++;
       }
-      col.innerText = gameField[i][j];
+      col.innerText = setFigure(i, j, col);
       row.appendChild(col);
     }
     counter++;
@@ -26,6 +25,15 @@ function createTable() {
   document.body.appendChild(table);
 }
 
+function setFigure (row, col, td) {
+  var type = typeof gameField[row][col];
+  if (type === "string" || type === "number") {
+    return gameField[row][col];
+  } else {
+    td.classList.add(gameField[row][col].classColor);
+    return gameField[row][col].avatar;
+  }
+}
 createTable();
 
 
