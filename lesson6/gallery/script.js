@@ -11,11 +11,16 @@ function createMiniature (name) {
   miniature.id = name;
   miniature.classList.add("miniature__item");
   miniature.style.backgroundImage = setBackgroundImage(miniaturePath, name);
+  miniature.addEventListener("click", setPicture)
   return miniature;
 }
 
 function setBackgroundImage (path, namePic) {
   return "url(" + path + namePic + ".jpg)"
+}
+function setPicture (event) {
+  var id = event.target.id;
+  contPicture.style.backgroundImage = setBackgroundImage(picturePath, id);
 }
 for (var i = 0; i <= countPictures; i++) {
   contMiniature.appendChild(createMiniature(i));
