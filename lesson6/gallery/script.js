@@ -20,7 +20,13 @@ function setBackgroundImage (path, namePic) {
 }
 function setPicture (event) {
   var id = event.target.id;
-  contPicture.style.backgroundImage = setBackgroundImage(picturePath, id);
+  try {
+    contPicture.style.backgroundImage = setBackgroundImage(picturePath, id);
+  }
+  catch (err){
+
+    contPicture.style.backgroundImage = setBackgroundImage("img/", "error.jpg");
+  }
 }
 for (var i = 0; i <= countPictures; i++) {
   contMiniature.appendChild(createMiniature(i));
