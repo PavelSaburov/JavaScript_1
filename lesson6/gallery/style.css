@@ -13,4 +13,10 @@
     margin: 10px;
     border: 4px solid orange;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.miniature__item:hover {
+    opacity: 0.5;
 }
