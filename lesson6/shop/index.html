@@ -6,55 +6,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="basket">
-            <h2>Ваша корзина пуста</h2>
-            <table class="basket__list">
+<div class="container">
+    <div class="basket">
+        <h2>Ваша корзина пуста</h2>
+        <table class="basket__list">
+            <tr>
+                <td>№ п/п</td>
+                <td>Название</td>
+                <td>Цена</td>
+            </tr>
+            <tfoot>
                 <tr>
-                    <td>№ п/п</td>
-                    <td>Название</td>
-                    <td>Цена</td>
+                    <td colspan="2">Сумма покупки</td>
+                    <td class="itog">0</td>
                 </tr>
-            </table>
+            </tfoot>
+        </table>
+    </div>
+    <div class="product">
+        <div class="product__item">
+            <img src="img/su_1.jpg" alt="product">
+            <h3 class="title">Системный блок 1</h3>
+            <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <h3 class="price">20000 руб.</h3>
+            <button>В корзину</button>
         </div>
-        <div class="product">
-            <div class="product__item">
-                <img src="img/su_1.jpg" alt="product">
-                <h3 class="title">Системный блок 1</h3>
-                <p class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <h3 class="price">20000 руб.</h3>
-                <button>В корзину</button>
-            </div>
-            <div class="product__item">
-                <img src="img/su_2.jpg" alt="product">
-                <h3 class="title">Системный блок 1</h3>
-                <p class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <h3 class="price">10000 руб.</h3>
-                <button>В корзину</button>
-            </div>
-            <div class="product__item">
-                <img src="img/su_3.jpg" alt="product">
-                <h3 class="title">Системный блок 1</h3>
-                <p class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <h3 class="price">20500 руб.</h3>
-                <button>В корзину</button>
-            </div>
-            <div class="product__item">
-                <img src="img/su_4.jpg" alt="product">
-                <h3 class="title">Системный блок 1</h3>
-                <p class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <h3 class="price">30000 руб.</h3>
-                <button>В корзину</button>
-            </div>
+        <div class="product__item">
+            <img src="img/su_2.jpg" alt="product">
+            <h3 class="title">Системный блок 2</h3>
+            <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <h3 class="price">10000 руб.</h3>
+            <button>В корзину</button>
+        </div>
+        <div class="product__item">
+            <img src="img/su_3.jpg" alt="product">
+            <h3 class="title">Системный блок 3</h3>
+            <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <h3 class="price">20500 руб.</h3>
+            <button>В корзину</button>
+        </div>
+        <div class="product__item">
+            <img src="img/su_4.jpg" alt="product">
+            <h3 class="title">Системный блок 4</h3>
+            <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <h3 class="price">30000 руб.</h3>
+            <button>В корзину</button>
         </div>
     </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
