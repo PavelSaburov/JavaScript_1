@@ -1,0 +1,10 @@
+.slider {
+    width: 840px;
+    height: 600px;
+    margin: 20px auto;
+    background-image: url("img/0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
