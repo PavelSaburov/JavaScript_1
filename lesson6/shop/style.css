@@ -1,0 +1,42 @@
+.container {
+    width: 1000px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+.basket {
+    background-color: antiquewhite;
+    padding: 20px;
+}
+.basket h2 {
+    text-align: center;
+}
+.basket__list {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+}
+.product__item {
+    width: 200px;
+    border: 2px solid #000;
+    text-align: center;
+    margin: 10px;
+}
+.product__item:hover {
+    box-shadow: 3px 3px 5px #AAA;
+}
+.product__item img {
+    padding: 5px;
+    width: 190px;
+}
+.product__item h3 {
+    margin: 10px;
+}
+
+.product__item button {
+    margin-bottom: 10px;
+}
