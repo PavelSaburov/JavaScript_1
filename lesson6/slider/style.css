@@ -2,9 +2,36 @@
     width: 840px;
     height: 600px;
     margin: 20px auto;
-    background-image: url("img/0.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("img/0.jpg") no-repeat center;
     background-size: cover;
     position: relative;
+}
+.prev, .next {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #aaa;
+    font-size: 40px;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    transition-duration: 0.3s;
+
+}
+.prev:hover, .next:hover {
+    background-color: #999;
+}
+.prev:active {
+    transform: translate(2px, 2px);
+}
+.next:active {
+    transform: translate(-2px, 2px);
+}
+.prev {
+    top: calc(50% - 30px);
+}
+.next {
+    right: 0;
+    top: calc(50% - 30px);
 }
