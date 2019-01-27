@@ -8,8 +8,9 @@ var gameIsRunning = false; // Запущена ли игра
 var snake_timer; // Таймер змейки
 var food_timer=5000; // Таймер для еды
 var wall_timer=8000; //таймер препядствий
+var wall_timer_delete=10000; //таймер препядствий
 var score = 0; // Результат
-
+setInterval(deleteWall, wall_timer_delete);
 function init() {
     prepareGameField(); // Генерация поля
 
@@ -195,8 +196,9 @@ function haveFood(unit) {
         createFood();
         score++;
         scoreBlock.innerText = "Ваши очки: " + score;
-        wall_timer += 100;
+        wall_timer -= 50;
         setTimeout(createWall, wall_timer);
+
     }
     return check;
 }
@@ -252,7 +254,11 @@ function createWall() {
     }
   }
 }
-
+function deleteWall () {
+  var wallList = document.querySelectorAll(".wall-unit"); //получаем список всех стен
+  var indexWall = Math.floor(Math.random() * wallList.length); //выбираем случайную стену для удаления
+  wallList[indexWall].classList.remove("wall-unit");
+}
 /**
  * Изменение направления движения змейки
  * @param e - событие
