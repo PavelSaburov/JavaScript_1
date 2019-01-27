@@ -132,7 +132,6 @@ function move() {
       }
       else if (direction == 'y+') {
         new_unit = document.getElementsByClassName('cell-' + (FIELD_SIZE_Y -1)+ '-' + (coord_x))[0];
-        console.log("");
       }
       else if (direction == 'y-') {
         new_unit = document.getElementsByClassName('cell-' + 0 + '-' + (coord_x))[0];
@@ -243,6 +242,7 @@ function createWall() {
 
       wall_cell.setAttribute('class', classes + 'wall-unit');
       wallCreated = true;
+      console.log(wall_cell);
     }
   }
 }
