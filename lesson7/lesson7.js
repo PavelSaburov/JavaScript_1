@@ -170,10 +170,11 @@ function haveFood(unit) {
 
     // Если еда
     if (unit_classes.includes('food-unit')) {
+        var scoreBlock = document.getElementById("snake-score");
         check = true;
         createFood();
-
         score++;
+        scoreBlock.innerText = "Ваши очки: " + score;
     }
     return check;
 }
