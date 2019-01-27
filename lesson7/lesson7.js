@@ -139,7 +139,7 @@ function move() {
     }
     // Проверки
     // 1) new_unit не часть змейки
-    if (!isSnakeUnit(new_unit) ) {
+    if (!isSnakeUnit(new_unit) && !isWallUnit(new_unit)) {
 
         // Добавление новой части змейки
         new_unit.setAttribute('class', new_unit.getAttribute('class') + ' snake-unit');
@@ -174,6 +174,10 @@ function isSnakeUnit(unit) {//проверка, что змейка не поп�
     }
     return check;
 }
+//проверка на стену
+function isWallUnit (unit) {
+  return unit.className.indexOf("wall") >= 0;
+}
 /**
  * проверка на еду
  * @param unit
@@ -191,6 +195,8 @@ function haveFood(unit) {
         createFood();
         score++;
         scoreBlock.innerText = "Ваши очки: " + score;
+        wall_timer += 100;
+        setTimeout(createWall, wall_timer);
     }
     return check;
 }
@@ -242,7 +248,7 @@ function createWall() {
 
       wall_cell.setAttribute('class', classes + 'wall-unit');
       wallCreated = true;
-      console.log(wall_cell);
+
     }
   }
 }
@@ -252,7 +258,7 @@ function createWall() {
  * @param e - событие
  */
 function changeDirection(e) {
-    console.log(e);
+
 	switch (e.keyCode) {
         case 37: // Клавиша влево
             if (direction != 'x+') {
