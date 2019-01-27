@@ -6,7 +6,8 @@ var snake = []; // Сама змейка
 var direction = 'y+'; // Направление движения змейки
 var gameIsRunning = false; // Запущена ли игра
 var snake_timer; // Таймер змейки
-var food_timer; // Таймер для еды
+var food_timer=5000; // Таймер для еды
+var wall_timer=8000; //таймер препядствий
 var score = 0; // Результат
 
 function init() {
@@ -67,7 +68,8 @@ function startGame() {
     respawn();//создали змейку
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
-    setTimeout(createFood, 5000);
+    setTimeout(createFood, food_timer);
+    setTimeout(createWall, wall_timer);
 }
 
 /**
@@ -219,6 +221,30 @@ function createFood() {
             foodCreated = true;
         }
     }
+}
+//создание стены
+function createWall() {
+  var wallCreated = false;
+
+  while (!wallCreated) { //пока стену не создали
+    // рандом
+    var wall_x = Math.floor(Math.random() * FIELD_SIZE_X);
+    var wall_y = Math.floor(Math.random() * FIELD_SIZE_Y);
+
+    var wall_cell = document.getElementsByClassName('cell-' + wall_y + '-' + wall_x)[0];
+    var wall_cell_classes = wall_cell.getAttribute('class').split(' ');
+
+    // проверка на змейку
+    if (!wall_cell_classes.includes('snake-unit')) {
+      var classes = '';
+      for (var i = 0; i < wall_cell_classes.length; i++) {
+        classes += wall_cell_classes[i] + ' ';
+      }
+
+      wall_cell.setAttribute('class', classes + 'wall-unit');
+      wallCreated = true;
+    }
+  }
 }
 
 /**
